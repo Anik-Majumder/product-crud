@@ -14,7 +14,8 @@ class ProductController extends Controller
     public function index(Request $request)
     {
 
-        $stockStatus = $request->query('stock', null);
+        $stockStatus = $request->stock;
+
 
         if ($stockStatus == 'instock') {
             $products = Product::where('stock', 'instock')->get();
@@ -23,7 +24,6 @@ class ProductController extends Controller
         } else {
             $products = Product::get();
         }
-
 
         return view('pages.home', compact('products'));
     }

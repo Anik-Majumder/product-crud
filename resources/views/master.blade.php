@@ -18,47 +18,11 @@
     <body>
         <!--nav -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="/">Product Bhai</a>
+            <div class="container-fluid d-flex">
+                <a class="navbar-brand font-monospace" href="/">Product Bhai</a>
 
-                <div
-                    class="collapse navbar-collapse d-flex justify-content-between"
-                    id="navbarNavDropdown"
-                >
-                    <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
-                            <a
-                                class="nav-link dropdown-toggle"
-                                href="#"
-                                id="navbarDropdownMenuLink"
-                                role="button"
-                                data-bs-toggle="dropdown"
-                                aria-expanded="false"
-                            >
-                                Filter
-                            </a>
-                            <ul
-                                class="dropdown-menu"
-                                aria-labelledby="navbarDropdownMenuLink"
-                            >
-                                <li>
-                                    <a
-                                        class="dropdown-item"
-                                        href="{{ route('home', ['stock' => 'instock']) }}"
-                                        >In Stock</a
-                                    >
-                                </li>
-                                <li>
-                                    <a
-                                        class="dropdown-item"
-                                        href="{{ route('home', ['stock' => 'stockout']) }}"
-                                        >Stock Out</a
-                                    >
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <form class="d-flex">
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <form class="d-flex ms-auto">
                         <input
                             class="form-control me-2"
                             type="search"
